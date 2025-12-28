@@ -1,0 +1,14 @@
+PLACEHOLDER IMAGES NEEDED:
+
+For Projects:
+- hackathon-platform.jpg (Devnovate X HackWithIndia project)
+- voice-agent.jpg (ACP-Enhanced E-Commerce Voice Agent)
+- careeradvisor.jpg (CareerAdvisor AI project)
+
+For Certificates:
+- tutedude-winner.jpg (Tutedude Web Hackathon Winner 2025)
+- skillsprint-winner.jpg (SkillSprint 2025 Hackathon Winner)
+- nvidia-llm.jpg (NVIDIA - Building LLM Applications)
+- gssoc-2025.jpg (GirlScript Summer of Code 2025)
+
+Note: Add these images to the assets/img/ and assets/pdf/ directories respectively.

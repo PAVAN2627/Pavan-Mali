@@ -27,24 +27,8 @@ function linkAction() {
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
-/*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-    skillsHeader = document.querySelectorAll('.skills__header')
 
-function toggleSkills() {
-    let itemClass = this.parentNode.className
-
-    for (i = 0; i < skillsContent.length; i++) {
-        skillsContent[i].className = 'skills__content skills__close'
-    }
-    if (itemClass === 'skills__content skills__close') {
-        this.parentNode.className = 'skills__content skills__open'
-    }
-}
-
-skillsHeader.forEach((el) => {
-    el.addEventListener('click', toggleSkills)
-})
+// Note: Skills accordion functionality removed - now using always-visible grid layout
 
 /*==================== QUALIFICATION TABS ====================*/
 
@@ -81,15 +65,7 @@ let swiperProjects = new Swiper('.portfolio .portfolio__container', {
     },
 });
 
-/*==================== CERTIFICATES SWIPER ====================*/
-let swiperCertificates = new Swiper('.certificate .portfolio__container', {
-    cssMode: true,
-    loop: false, // Disable looping to prevent duplication
-    pagination: {
-        el: '.certificate .swiper-pagination', // Specific selector for Certificates
-        clickable: true,
-    },
-});
+// Note: Certificates now use grid layout instead of swiper
 
 /*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper('.testimonial__container', {
@@ -149,31 +125,23 @@ window.addEventListener('scroll', scrollUp)
 
 
 /*==================== DARK LIGHT THEME ====================*/ 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
-
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
+// Simplified dark mode implementation
+document.addEventListener('DOMContentLoaded', function() {
+    // Get saved theme from localStorage
+    const savedTheme = localStorage.getItem('selected-theme');
+    const savedIcon = localStorage.getItem('selected-icon');
+    
+    // Apply saved theme if exists
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+    }
+    
+    // Apply saved icon if exists
+    const themeButton = document.getElementById('theme-button');
+    if (savedIcon === 'uil-sun' && themeButton) {
+        themeButton.classList.add('uil-sun');
+        themeButton.classList.remove('uil-moon');
+    }
+    
+    console.log('Main.js dark mode initialized');
+});
