@@ -5,25 +5,25 @@ import { Code2, GitBranch, Award, Users } from "lucide-react";
 const stats = [
   {
     icon: Code2,
-    value: "6+",
+    value: "10+",
     label: "Projects Completed",
     color: "from-primary to-accent",
   },
   {
     icon: GitBranch,
-    value: "100+",
+    value: "250+",
     label: "GitHub Contributions",
     color: "from-accent to-primary",
   },
   {
     icon: Award,
-    value: "9+",
+    value: "15+",
     label: "Certifications",
     color: "from-primary to-glow",
   },
   {
     icon: Users,
-    value: "2+",
+    value: "4+",
     label: "Hackathon Wins",
     color: "from-accent to-primary",
   },
