@@ -79,20 +79,22 @@ export default function HeroSection() {
                 Preview Resume
               </a>
               <a
-                href="https://github.com/pavanmali"
+                href="https://www.linkedin.com/in/pavan-mali-1808b6273/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all hover:scale-110 border border-border/50"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://linkedin.com/in/pavanmali"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all hover:scale-110 border border-border/50"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin size={20} />
+              </a>
+              <a
+                href="https://github.com/PAVAN2627"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all hover:scale-110 border border-border/50"
+                aria-label="GitHub Profile - PAVAN2627"
+              >
+                <Github size={20} />
               </a>
             </div>
           </motion.div>
