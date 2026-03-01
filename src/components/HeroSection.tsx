@@ -70,7 +70,7 @@ export default function HeroSection() {
                 <ArrowDown size={16} />
               </a>
               <a
-                href="/Pavan_Mali_Resume_DevOps.pdf"
+                href="/Pavan_Mali_DevOps.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-medium rounded-lg hover:bg-secondary/80 transition-all hover:gap-3 border border-border/50"
