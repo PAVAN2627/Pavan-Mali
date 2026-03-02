@@ -11,7 +11,7 @@ const stats = [
   },
   {
     icon: GitBranch,
-    value: "250+",
+    value: "450+",
     label: "GitHub Contributions",
     color: "from-accent to-primary",
   },
